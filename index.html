@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site de Teste</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f4f9;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    color: #2c3e50;
+    margin-bottom: 12px;
+  }
+
+  .botao {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+  }
+
+  .botao:hover {
+    background: #2980b9;
+  }
+
+  #contador {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Meu Site de Teste</h1>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio">
+    <h2>Bem-vindo!</h2>
+    <p>Este é um site simples criado apenas para fins de teste. Ele contém algumas seções básicas e um pequeno exemplo interativo com JavaScript.</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre este site</h2>
+    <p>Aqui você pode testar layout, estilos CSS e um pouco de interatividade. Ideal para verificar como o HTML se comporta antes de usar em um projeto maior.</p>
+
+    <button class="botao" onclick="incrementar()">Clique aqui</button>
+    <p id="contador">Cliques: 0</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: teste@exemplo.com</p>
+    <p>Telefone: (00) 00000-0000</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Site de Teste. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  let cliques = 0;
+  function incrementar() {
+    cliques++;
+    document.getElementById('contador').textContent = 'Cliques: ' + cliques;
+  }
+</script>
+
+</body>
+</html>
